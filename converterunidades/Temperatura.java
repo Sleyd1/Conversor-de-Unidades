@@ -1,12 +1,17 @@
 package converterunidades;
 import java.util.Scanner;
 
+/**
+ * Converte temperaturas entre Celsius, Fahrenheit e Kelvin.
+ * Utiliza entrada do usuário para definir tipo de conversão.
+ */
+
 public class Temperatura {
     private final float valor1;
     private final Scanner entrada = new Scanner(System.in);
 
     public Temperatura(float valor1){
-        this.valor1 = (int) valor1;
+        this.valor1 = valor1;
     }
 
     private float  FahrenheitParaCelsius(){
@@ -26,7 +31,7 @@ public class Temperatura {
     }
     private float kelvinParaCelsius(){
         //Kelvin (K) → Celsius (°C)
-        return (float) (valor1 - 273.25);
+        return (float) (valor1 - 273.15);
 
     }
     private float fahrenheitParaKelvin(){
@@ -39,7 +44,7 @@ public class Temperatura {
     }
 
 
-    public void coverter(){
+    public void converter(){
         System.out.println("Escolha as unidades de temperatura que vc quer converter:");
         System.out.println("Fahrenheit → Celsius digite: FC");
         System.out.println("Celsius → Fahrenheit digite: CF");
@@ -77,6 +82,7 @@ public class Temperatura {
                 System.out.println("Valor invalido! ");
             }
         }
+
         entrada.close();
 
     }

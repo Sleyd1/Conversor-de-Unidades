@@ -70,6 +70,7 @@ public class Comprimento {
        } else {
            System.out.println(valorMm.mmParaMi() + "MI");
        }
+       entrada.close();
         System.out.println("---------------Fim do programa--------------------");
         System.out.println("--------------------------------------------------");
     }
@@ -100,6 +101,7 @@ public class Comprimento {
         } else {
             System.out.println(valorCm.cmParaMi() + "MI");
         }
+        entrada.close();
 
         System.out.println("---------------Fim do programa--------------------");
         System.out.println("--------------------------------------------------");
@@ -132,6 +134,7 @@ public class Comprimento {
         } else {
             System.out.println(valorIn.inParaMi() + "MI");
         }
+        entrada.close();
         System.out.println("---------------Fim do programa--------------------");
         System.out.println("--------------------------------------------------");
 
@@ -163,6 +166,7 @@ public class Comprimento {
         } else {
             System.out.println(valorPes.ftParaMi() + "MI");
         }
+        entrada.close();
 
         System.out.println("---------------Fim do programa--------------------");
         System.out.println("--------------------------------------------------");
@@ -195,7 +199,7 @@ public class Comprimento {
         } else {
             System.out.println(valorMilha.miParaFt() + "FT");
         }
-
+        entrada.close();
         System.out.println("---------------Fim do programa--------------------");
         System.out.println("--------------------------------------------------");
 
