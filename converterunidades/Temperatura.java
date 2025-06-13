@@ -2,10 +2,8 @@ package converterunidades;
 import java.util.Scanner;
 
 public class Temperatura {
-    private float valor1;
-    private Scanner entrada = new Scanner(System.in);
-    private String usuarioEscreve;
-    private String[] valoresValidos = {"FC","CF","CK","KC","FK","KF"};
+    private final float valor1;
+    private final Scanner entrada = new Scanner(System.in);
 
     public Temperatura(float valor1){
         this.valor1 = (int) valor1;
@@ -54,7 +52,7 @@ public class Temperatura {
 
     private void escolhaDeConversao(){
         System.out.print("Digite Aqui (apenas duas letras):");
-        usuarioEscreve = entrada.nextLine();
+        String usuarioEscreve = entrada.nextLine();
         if (!usuarioEscreve.matches("(?i)^[a-z]{2}$")){
             System.out.println("por favor, digite apenas duas letras validas para a sua conversão.");
         } else {
@@ -73,8 +71,10 @@ public class Temperatura {
             }else if (usuarioEscreve.equalsIgnoreCase("FK")) {
                 System.out.println("Fahrenheit → Kelvin: " + fahrenheitParaKelvin() + "K");
 
+            } else if (usuarioEscreve.equalsIgnoreCase("KF")) {
+                System.out.println("Kelvin → Fahrenheit: " + kelvinParaFahrenheit() + "°F");
             } else {
-                System.out.println("Kelvin (K) → Fahrenheit: " + kelvinParaFahrenheit() + "°F");
+                System.out.println("Valor invalido! ");
             }
         }
         entrada.close();
